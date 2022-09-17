@@ -2,7 +2,7 @@
 
 ---
 
-> SpringBoot + JPA 를 활용한 기본 게시판 API 서버  
+>SpringBoot + JPA 를 활용한 기본 게시판 API 서버  
 >이것저것 많은 기술들을 녹여 낼 예정입니다.
 
 <br>
