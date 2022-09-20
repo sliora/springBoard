@@ -1,4 +1,4 @@
-package jpa.springBoard.entity;
+package jpa.springBoard.domain.board;
 
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -13,6 +13,7 @@ import javax.persistence.Id;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Board {
+
     @Id @GeneratedValue
     private Long id;
     private String title;
