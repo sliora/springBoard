@@ -18,10 +18,21 @@ public class Board {
     private Long id;
     private String title;
     private String content;
+    private boolean deleted;
 
     @Builder
-    public Board(String title, String content) {
+    public Board(Long id, String title, String content) {
+        this.id = id;
         this.title = title;
         this.content = content;
+    }
+
+    public void update(final Board board) {
+        this.title = board.getTitle();
+        this.content = board.getContent();
+    }
+
+    public void delete() {
+        this.deleted = true;
     }
 }
