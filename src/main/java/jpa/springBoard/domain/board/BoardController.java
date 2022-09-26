@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -35,4 +36,13 @@ public class BoardController {
         return boardService.saveBoard(request.toEntity());
     }
 
+    @PutMapping("/api/v1/board/{id}")
+    public Long update(@PathVariable Long id, BoardRequest boardRequest) {
+        return boardService.updateBoardInfo(id, boardRequest.toEntity());
+    }
+
+    @DeleteMapping("/api/v1/board/{id}")
+    public Long delete(@PathVariable Long id) {
+        return boardService.deleteBoardInfo(id);
+    }
 }
